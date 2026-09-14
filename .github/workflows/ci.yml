@@ -5,7 +5,7 @@ on:
   pull_request:
 
 jobs:
-  test:
+  core:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -20,6 +20,25 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install package
-        run: python -m pip install ".[agent-control]"
+        run: python -m pip install "."
       - name: Run complete test suite
         run: python -m unittest discover -s tests -v
+
+  agent-control:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12", "3.13"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install package with Agent Control integration
+        run: python -m pip install ".[agent-control]"
+      - name: Run Agent Control integration tests
+        run: python -m unittest discover -s tests -p 'test_agent_control_integration.py' -v
