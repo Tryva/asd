@@ -54,3 +54,17 @@ and self-hosted inference once public identity and fit are both verified.
 This task stops at discovery and qualification. Outreach, use of Gmail, and any
 provider call require a separate explicit approval. Generic team aliases may be
 listed as public contact routes, but are not treated as individual emails.
+
+## Tester refinement
+
+The ten original high-profile candidates remain `TIER_A_STRATEGIC`: they are
+valuable strategic conversations but generally have high contact difficulty.
+Ten hands-on contributors were selected as `TIER_B_TESTER` because public
+technical activity, project relevance, and a reachable public channel are more
+compatible with a first tester conversation. The remaining twenty stay in
+`RESERVE` for later enrichment.
+
+Recommended first-contact order is the Tier B list in `TARGETS.md`: William FH,
+Vadym Barda, Nuno Campos, David Duong, Steffen Schmitz, Nimar, Hassieb Pakzad,
+Ben Bachem, Greyson LaLonde, and Lorenze Jay. No direct public professional
+email was verified; use only the listed public project/community channels.
