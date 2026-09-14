@@ -38,6 +38,20 @@ python -m unittest discover -s tests -v
 
 The demo and tests are local and do not call an LLM, provider, or paid API.
 
+## Try ASD in 5 minutes
+
+Run ASD on a synthetic JSON trace and inspect its status, signals, and
+evidence:
+
+```bash
+python examples/test_asd.py examples/looping.json
+```
+
+Use `examples/TRACE_FORMAT.md` to prepare a redacted trace. It documents the
+smallest useful event shape, trusted progress anchors, and fields that are not
+progress proof. Existing synthetic traces cover progressing, looping, and
+insufficient-evidence (`UNKNOWN`) outcomes.
+
 ## Example output
 
 A synthetic trajectory that repeats the same lookup without a state change can
