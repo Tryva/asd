@@ -316,3 +316,137 @@ fit inference; DECISION is `QUALIFY_FOR_OUTREACH` for `QUALIFIED` rows and
 - NAME: Jason Liu; OBSERVATION: Public Instructor maintainer; EVIDENCE: public repository and profile; HYPOTHESIS: schema/tool retries can be costly; DECISION: QUALIFY_FOR_OUTREACH.
 - NAME: Mark Sze; OBSERVATION: Public AG2 contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: multi-agent handoffs may repeat or stall; DECISION: QUALIFY_FOR_OUTREACH.
 - NAME: AstraBert; OBSERVATION: Public LlamaIndex contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: retrieval-agent workflows may accumulate redundant steps; DECISION: QUALIFY_FOR_OUTREACH.
+
+## Tier B contact-path resolution
+
+Resolved from public sources on 2026-09-14. No contact has been sent. `YES`
+means a public, attributable route exists; it does not imply permission to
+contact without a separate approval.
+
+### William FH
+
+- NAME: William FH
+- DIRECT_PUBLIC_EMAIL: NONE VERIFIED
+- EMAIL_SOURCE: NONE
+- PRIMARY_CONTACT_CHANNEL: Public GitHub profile
+- PRIMARY_CONTACT_URL: https://github.com/hinthornw
+- SECONDARY_CHANNEL: LangChain public community
+- CONTACT_DIFFICULTY: MEDIUM
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The profile names William, links him to LangChain, and shows public agent/runtime work; the community provides a relevant project-level route without guessing an address.
+
+### Vadym Barda
+
+- NAME: Vadym Barda
+- DIRECT_PUBLIC_EMAIL: NONE VERIFIED
+- EMAIL_SOURCE: NONE
+- PRIMARY_CONTACT_CHANNEL: Public GitHub profile
+- PRIMARY_CONTACT_URL: https://github.com/vbarda
+- SECONDARY_CHANNEL: Public professional profile
+- CONTACT_DIFFICULTY: HIGH
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The GitHub handle is the verified identity used in LangGraph contribution evidence; the secondary professional page is public but has role-history ambiguity, so it is not used as sole proof.
+
+### Nuno Campos
+
+- NAME: Nuno Campos
+- DIRECT_PUBLIC_EMAIL: NONE VERIFIED
+- EMAIL_SOURCE: NONE
+- PRIMARY_CONTACT_CHANNEL: Public GitHub profile
+- PRIMARY_CONTACT_URL: https://github.com/nfcampos
+- SECONDARY_CHANNEL: Public PyPI project profile
+- CONTACT_DIFFICULTY: MEDIUM
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The GitHub identity and PyPI profile are directly attributable and show recent LangGraph/checkpoint tooling, making a project-focused technical route realistic.
+
+### David Duong
+
+- NAME: David Duong
+- DIRECT_PUBLIC_EMAIL: david@duong.cz
+- EMAIL_SOURCE: https://github.com/dqbd; http://duong.cz
+- PRIMARY_CONTACT_CHANNEL: Direct public professional email
+- PRIMARY_CONTACT_URL: mailto:david@duong.cz
+- SECONDARY_CHANNEL: Personal technical website
+- CONTACT_DIFFICULTY: LOW
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The address is publicly exposed on the verified GitHub profile and uses the domain of the linked personal technical site; no inference was used.
+
+### Steffen Schmitz
+
+- NAME: Steffen Schmitz
+- DIRECT_PUBLIC_EMAIL: NONE VERIFIED (a public non-professional address was not used)
+- EMAIL_SOURCE: NONE
+- PRIMARY_CONTACT_CHANNEL: Langfuse GitHub Discussions
+- PRIMARY_CONTACT_URL: https://github.com/langfuse/langfuse/discussions
+- SECONDARY_CHANNEL: Public GitHub profile
+- CONTACT_DIFFICULTY: MEDIUM
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: Langfuse explicitly uses GitHub Discussions for support and feature requests, and the public profile verifies Steffen’s project affiliation; this avoids a personal address and keeps outreach relevant.
+
+### Nimar
+
+- NAME: Nimar
+- DIRECT_PUBLIC_EMAIL: NONE VERIFIED
+- EMAIL_SOURCE: NONE
+- PRIMARY_CONTACT_CHANNEL: Public GitHub profile
+- PRIMARY_CONTACT_URL: https://github.com/nimarb
+- SECONDARY_CHANNEL: Langfuse public team and community pages
+- CONTACT_DIFFICULTY: MEDIUM
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The public profile is linked to the active Langfuse contributor identity, while the official team page confirms the product-engineering context and provides a project route.
+
+### Hassieb Pakzad
+
+- NAME: Hassieb Pakzad
+- DIRECT_PUBLIC_EMAIL: NONE VERIFIED
+- EMAIL_SOURCE: NONE
+- PRIMARY_CONTACT_CHANNEL: Personal/professional website
+- PRIMARY_CONTACT_URL: https://www.hassieb.com/
+- SECONDARY_CHANNEL: Public GitHub profile
+- CONTACT_DIFFICULTY: LOW
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The personal site names Hassieb, describes hands-on software engineering work, and exposes a Get in touch route; GitHub independently verifies the engineering identity.
+
+### Ben Bachem
+
+- NAME: Ben Bachem
+- DIRECT_PUBLIC_EMAIL: hello@benbachem.de
+- EMAIL_SOURCE: https://www.benbachem.de/
+- PRIMARY_CONTACT_CHANNEL: Direct public professional email
+- PRIMARY_CONTACT_URL: mailto:hello@benbachem.de
+- SECONDARY_CHANNEL: Personal/professional website
+- CONTACT_DIFFICULTY: LOW
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: Ben’s own public site explicitly publishes the address and links it to his product-engineering identity; the site also provides a non-email route.
+
+### Greyson LaLonde
+
+- NAME: Greyson LaLonde
+- DIRECT_PUBLIC_EMAIL: greyson.r.lalonde@gmail.com
+- EMAIL_SOURCE: https://github.com/greysonlalonde
+- PRIMARY_CONTACT_CHANNEL: Direct public email listed on verified profile
+- PRIMARY_CONTACT_URL: mailto:greyson.r.lalonde@gmail.com
+- SECONDARY_CHANNEL: Personal website contact page
+- CONTACT_DIFFICULTY: LOW
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The address is publicly listed on Greyson’s verified GitHub profile and the personal site identifies current hands-on agent-framework work; it is public but not a company-domain address.
+
+### Lorenze Jay
+
+- NAME: Lorenze Jay
+- DIRECT_PUBLIC_EMAIL: NONE VERIFIED
+- EMAIL_SOURCE: NONE
+- PRIMARY_CONTACT_CHANNEL: Personal/professional website
+- PRIMARY_CONTACT_URL: https://lorenzejay.dev/
+- SECONDARY_CHANNEL: Public GitHub profile
+- CONTACT_DIFFICULTY: LOW
+- OUTREACH_READY: YES
+- WHY_THIS_CHANNEL: The site publishes recent technical writing and agent-system work, and the GitHub profile links the same public identity to CrewAI activity.
+
+## Tier B contact summary
+
+- TARGETS_CHECKED: 10
+- PUBLIC_CONTACT_PATHS_FOUND: 10
+- OUTREACH_READY: 10
+- REPLACEMENTS: 0
+- DIRECT_PUBLIC_EMAILS_FOUND: 3 (two domain-professional; one public profile address on a consumer domain)

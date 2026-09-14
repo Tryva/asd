@@ -68,3 +68,18 @@ Recommended first-contact order is the Tier B list in `TARGETS.md`: William FH,
 Vadym Barda, Nuno Campos, David Duong, Steffen Schmitz, Nimar, Hassieb Pakzad,
 Ben Bachem, Greyson LaLonde, and Lorenze Jay. No direct public professional
 email was verified; use only the listed public project/community channels.
+
+## Contact-path resolution
+
+All ten Tier B candidates now have a usable public, attributable route. Three
+public addresses were verified from first-party profiles/sites (two professional
+domains and one public consumer-domain profile address); the other seven use a
+personal site, GitHub profile, or official project discussion/community. A
+public address is recorded only when the page explicitly publishes it. The
+non-professional public address is flagged as such and is not silently treated
+as a company contact.
+
+No candidate was replaced. No Reddit, HN, data-broker, guessed, or private
+profile route was used. GitHub issues/discussions are reserved for relevant,
+project-context messages and should not be used as generic solicitation. No
+outreach or Gmail activity occurred during this task.
