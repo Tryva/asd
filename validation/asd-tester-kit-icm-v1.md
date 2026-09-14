@@ -55,8 +55,10 @@ the detector/event interfaces.
   `EXACT_REPEAT`, `NO_NEW_ARTIFACT`, and `NO_STATE_DELTA`; ambiguous →
   `UNKNOWN`.
 - Runner usage error: no path returns a clear usage message and exit code 2.
-- Fresh clone: clone and package install completed; the post-change fresh
-  clone replay is recorded after commit/push below.
+- Fresh clone after push: clone → install → first `LOOPING` result completed in
+  under one minute on this host (install took approximately 35–45 seconds).
+- Custom redacted trace replay succeeded with `LOOPING` and the same evidence.
+- Fresh-clone suite: all 44 tests passed.
 - No core files, thresholds, contracts, or integration behavior changed.
 
 ## REMAINING_FRICTIONS
@@ -68,6 +70,6 @@ the detector/event interfaces.
 
 ## NEXT_DECISION
 
-After a fresh-clone replay reaches the first result in under five minutes,
-mark the kit `READY_FOR_EXTERNAL_TESTERS`; otherwise modify only the measured
-friction.
+The kit reaches the first meaningful result in under five minutes on a clean
+clone and is `READY_FOR_EXTERNAL_TESTERS`. Reassess after actual external
+tester feedback.

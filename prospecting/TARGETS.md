@@ -1,0 +1,280 @@
+# ASD target pool
+
+As of 2026-09-14. Public evidence only. `OUTREACH_READY` means an attributable
+public profile and a public project/community route exist; it does not mean that
+contact has happened or that ASD fit is proven.
+
+## High-priority outreach-ready candidates
+
+### 1. Harrison Chase
+
+- NAME: Harrison Chase
+- ROLE: Co-founder and CEO, LangChain
+- COMPANY_OR_PROJECT: LangChain / LangGraph
+- SOURCE: https://github.com/langchain-ai/langgraph; https://www.langchain.com/about
+- PUBLIC_EVIDENCE: Public GitHub identity `hwchase17`; LangChain identifies Harrison as a co-founder and maintains open-source agent projects.
+- AGENT_STACK: LangChain, LangGraph
+- PAIN_SIGNAL: INFERENCE: stateful, cyclical agent runtimes expose tool, loop, and progress-control failure surfaces; direct personal pain not verified.
+- WHY_ASD_FIT: High relevance to teams operating multi-step agent execution and reliability primitives.
+- PUBLIC_PROFILE: https://github.com/hwchase17
+- CONTACT_CHANNEL: Public LangGraph/LangChain issues, community, or linked public project channels.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public project leader connected to active agent runtime work.
+- EVIDENCE: Official about page and public repository ownership.
+- HYPOTHESIS: ASD may be relevant where agent execution needs measurable progress and cost control.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 2. Lance Martin
+
+- NAME: Lance Martin
+- ROLE: Agent engineering/research contributor
+- COMPANY_OR_PROJECT: LangChain / LangGraph
+- SOURCE: https://github.com/langchain-ai/langgraph; https://reference.langchain.com/python/langgraph/overview
+- PUBLIC_EVIDENCE: Public GitHub identity `rlancemartin`; public LangGraph material covers controllable, stateful, multi-actor applications.
+- AGENT_STACK: LangGraph, LangChain
+- PAIN_SIGNAL: INFERENCE: checkpointed and cyclical graphs create observability and failure-recovery surfaces; direct personal pain not verified.
+- WHY_ASD_FIT: Technical builder close to runtime behavior, evaluation, and agent reliability.
+- PUBLIC_PROFILE: https://github.com/rlancemartin
+- CONTACT_CHANNEL: Public repository issues, docs/community channels, linked public profile.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public contributor connected to stateful agent runtime patterns.
+- EVIDENCE: Contributor history and official LangGraph reference.
+- HYPOTHESIS: ASD could help detect no-progress states in graph execution.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 3. João Moura
+
+- NAME: João Moura
+- ROLE: Founder and CEO
+- COMPANY_OR_PROJECT: CrewAI
+- SOURCE: https://github.com/CrewAIInc/crewAI; https://campus.crewai.com/courses/crewai-fundamentals
+- PUBLIC_EVIDENCE: Public profile identifies him as founder of crewAI; official course identifies Founder & CEO; public OSS framework focuses on autonomous agents.
+- AGENT_STACK: CrewAI
+- PAIN_SIGNAL: INFERENCE: role-based multi-agent orchestration can produce loops, redundant calls, and unclear handoffs; direct personal pain not verified.
+- WHY_ASD_FIT: Strong fit with multi-agent reliability and execution-cost questions.
+- PUBLIC_PROFILE: https://github.com/joaomdmoura
+- CONTACT_CHANNEL: CrewAI Community, public repository issues, official public pages.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public founder of an active multi-agent OSS project.
+- EVIDENCE: Official community/course and repository.
+- HYPOTHESIS: ASD may expose execution stagnation in collaborative agent workflows.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 4. Jerry Liu
+
+- NAME: Jerry Liu
+- ROLE: Co-founder and CEO
+- COMPANY_OR_PROJECT: LlamaIndex
+- SOURCE: https://github.com/run-llama/llama_index; https://www.databricks.com/dataaisummit/speaker/jerry-liu
+- PUBLIC_EVIDENCE: Public profile `jerryjliu`; Databricks identifies him as LlamaIndex co-founder/CEO; project supports document workflows and agents.
+- AGENT_STACK: LlamaIndex
+- PAIN_SIGNAL: INFERENCE: document and tool workflows may create repeated retrieval/tool steps and cost variance; direct personal pain not verified.
+- WHY_ASD_FIT: Relevant to production workflows where successful task completion matters more than raw model output.
+- PUBLIC_PROFILE: https://github.com/jerryjliu
+- CONTACT_CHANNEL: Public LlamaIndex issues/discussions and official community routes.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public leader of an active agent/document workflow platform.
+- EVIDENCE: Official speaker page and repository.
+- HYPOTHESIS: ASD may support cost-per-success visibility for agentic retrieval workflows.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 5. Douwe Maan
+
+- NAME: Douwe Maan
+- ROLE: Pydantic AI lead
+- COMPANY_OR_PROJECT: Pydantic AI
+- SOURCE: https://github.com/pydantic/pydantic-ai; https://pydantic.dev/authors/douwe-maan
+- PUBLIC_EVIDENCE: Public profile states Pydantic AI lead; official author page and active framework repository are public.
+- AGENT_STACK: Pydantic AI, Pydantic
+- PAIN_SIGNAL: INFERENCE: typed agent/tool contracts create measurable validation and retry boundaries; direct personal pain not verified.
+- WHY_ASD_FIT: Strong technical fit for detecting failures across typed tool workflows without prescribing a provider.
+- PUBLIC_PROFILE: https://github.com/DouweM
+- CONTACT_CHANNEL: Pydantic public community and repository issues.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: MEDIUM
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public framework lead working at the interface of agents and validation.
+- EVIDENCE: Official author page, profile, and repository.
+- HYPOTHESIS: ASD may complement typed validation with execution-progress evidence.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 6. Samuel Colvin
+
+- NAME: Samuel Colvin
+- ROLE: Pydantic founder/maintainer
+- COMPANY_OR_PROJECT: Pydantic AI
+- SOURCE: https://github.com/pydantic/pydantic-ai; https://pydantic.dev/authors/samuel-colvin
+- PUBLIC_EVIDENCE: Public profile describes the Pydantic stack including Pydantic AI and Logfire; active public repository.
+- AGENT_STACK: Pydantic AI, Pydantic Logfire
+- PAIN_SIGNAL: INFERENCE: agent validation and observability are adjacent to state, retry, and error-loop detection; direct personal pain not verified.
+- WHY_ASD_FIT: Relevant to reliable agent interfaces and evidence-oriented debugging.
+- PUBLIC_PROFILE: https://github.com/samuelcolvin
+- CONTACT_CHANNEL: Pydantic public community, docs, and repository issues.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public maintainer bridging validation, agents, and observability.
+- EVIDENCE: Official author/about pages and repository.
+- HYPOTHESIS: ASD may add a no-progress signal to existing validation/observability workflows.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 7. Marc Klingen
+
+- NAME: Marc Klingen
+- ROLE: Co-founder and CEO
+- COMPANY_OR_PROJECT: Langfuse
+- SOURCE: https://github.com/langfuse/langfuse; https://langfuse.com/about
+- PUBLIC_EVIDENCE: Official Langfuse page identifies Marc as co-founder/CEO; Langfuse is an open-source tracing/evaluation platform.
+- AGENT_STACK: Langfuse, agent tracing/evals
+- PAIN_SIGNAL: INFERENCE: trace and evaluation users need actionable failure/progress signals; direct personal pain not verified.
+- WHY_ASD_FIT: Direct adjacency to agent execution evidence and operational failure analysis.
+- PUBLIC_PROFILE: https://github.com/marcklingen
+- CONTACT_CHANNEL: Langfuse GitHub discussions/issues and official public pages.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public observability-company leader with active OSS project.
+- EVIDENCE: Official team page and repository.
+- HYPOTHESIS: ASD could complement traces with explicit stagnation detection.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 8. Ankur Goyal
+
+- NAME: Ankur Goyal
+- ROLE: Founder and CEO
+- COMPANY_OR_PROJECT: Braintrust
+- SOURCE: https://github.com/braintrustdata/braintrust-sdk-python; https://www.delphi.ai/ankur-goyal
+- PUBLIC_EVIDENCE: Public profile contributes to Braintrust SDK ecosystem; public professional page identifies Braintrust founder/CEO.
+- AGENT_STACK: Braintrust SDK, evals, traces
+- PAIN_SIGNAL: INFERENCE: evaluation platforms encounter incomplete traces, failure attribution, and cost/quality trade-offs; direct personal pain not verified.
+- WHY_ASD_FIT: Relevant to evidence quality for agent failures and successful-task measurement.
+- PUBLIC_PROFILE: https://github.com/ankrgyl
+- CONTACT_CHANNEL: Braintrust public SDK issues, community routes, and public professional page.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public leader of an agent evaluation/observability ecosystem.
+- EVIDENCE: Public SDK organization and professional profile.
+- HYPOTHESIS: ASD may supply a focused stagnation signal to eval datasets and traces.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 9. Charles Packer
+
+- NAME: Charles Packer
+- ROLE: Co-founder and CEO
+- COMPANY_OR_PROJECT: Letta
+- SOURCE: https://github.com/letta-ai/letta
+- PUBLIC_EVIDENCE: Public profile states co-founder/CEO; Letta is a public stateful-agent project focused on memory.
+- AGENT_STACK: Letta, stateful agents, memory
+- PAIN_SIGNAL: INFERENCE: long-lived state and memory create ambiguity about progress, repeated work, and recovery; direct personal pain not verified.
+- WHY_ASD_FIT: Strong fit for detecting no-progress behavior in stateful agents.
+- PUBLIC_PROFILE: https://github.com/cpacker
+- CONTACT_CHANNEL: Letta public repository issues and linked project channels.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public founder working on stateful agents.
+- EVIDENCE: Profile and active public repository.
+- HYPOTHESIS: ASD can help distinguish useful state transitions from repeated agent activity.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+### 10. Abhi Aiyer
+
+- NAME: Abhi Aiyer
+- ROLE: CTO and co-founder
+- COMPANY_OR_PROJECT: Mastra
+- SOURCE: https://github.com/mastra-ai/mastra; https://mastra.ai/about
+- PUBLIC_EVIDENCE: Official Mastra page identifies Abhi as CTO; Mastra is a public TypeScript framework for AI apps and agents.
+- AGENT_STACK: Mastra, TypeScript agent framework
+- PAIN_SIGNAL: INFERENCE: production agent apps need execution visibility, limits, and failure recovery; direct personal pain not verified.
+- WHY_ASD_FIT: Relevant to teams shipping agent runtimes and measuring real workflow outcomes.
+- PUBLIC_PROFILE: https://github.com/abhiaiyer91
+- CONTACT_CHANNEL: Mastra repository issues, public site, and linked project channels.
+- DIRECT_PUBLIC_EMAIL: UNKNOWN (none verified; no guessed email)
+- CONTACT_DIFFICULTY: HIGH
+- PRIORITY: HIGH
+- STATUS: OUTREACH_READY
+- OBSERVATION: Public technical co-founder of an active agent framework.
+- EVIDENCE: Official team page and repository.
+- HYPOTHESIS: ASD may improve early detection of loops and unproductive tool sequences.
+- DECISION: QUALIFY_FOR_OUTREACH
+
+## Reserve candidates
+
+| NAME | ROLE | COMPANY_OR_PROJECT | SOURCE | PUBLIC_EVIDENCE | AGENT_STACK | PAIN_SIGNAL | WHY_ASD_FIT | PUBLIC_PROFILE | CONTACT_CHANNEL | DIRECT_PUBLIC_EMAIL | CONTACT_DIFFICULTY | PRIORITY | STATUS |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| William FH | Engineer | LangChain / LangGraph | https://github.com/langchain-ai/langgraph/graphs/contributors | Public contributor `hinthornw`, active framework repo | LangGraph | INFERENCE: graph execution has loop/checkpoint surfaces; pain unverified | Runtime-adjacent technical builder | https://github.com/hinthornw | LangGraph issues/profile | UNKNOWN (none verified; no guessed email) | HIGH | MEDIUM | QUALIFIED |
+| Vadym Barda | UNKNOWN | LangGraph | https://github.com/langchain-ai/langgraph/graphs/contributors | Active public contributor `vbarda` | LangGraph | INFERENCE: stateful execution can need progress signals | Relevant contributor; role unverified | https://github.com/vbarda | Repository issues/profile | UNKNOWN (none verified; no guessed email) | HIGH | MEDIUM | QUALIFIED |
+| Nuno Campos | Engineer | Witan Labs / LangGraph | https://github.com/langchain-ai/langgraph/graphs/contributors | Public profile and active contributor record | LangGraph | INFERENCE: orchestration failure surface; pain unverified | Builder with public project link | https://github.com/nfcampos | Repository issues/profile | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| David Duong | Engineer | LangGraph | https://github.com/langchain-ai/langgraph/graphs/contributors | Public contributor with linked blog | LangGraph | INFERENCE: tool/state failures are plausible; pain unverified | Technical reserve for runtime discussions | https://github.com/dqbd | Repository issues/profile | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Steffen Schmitz | Engineer | Langfuse | https://github.com/langfuse/langfuse/graphs/contributors | Public profile identifies Langfuse engineering | Langfuse | INFERENCE: traces need actionable failure state | Observability practitioner | https://github.com/Steffen911 | Langfuse issues/discussions | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Nimar | Researcher/engineer | Langfuse / Senthoq | https://github.com/langfuse/langfuse/graphs/contributors | Public profile links lab and company context | Langfuse | INFERENCE: eval/trace gaps; pain unverified | Evaluation-oriented builder | https://github.com/nimarb | Langfuse issues/discussions | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Hassieb Pakzad | Engineer | Langfuse | https://github.com/langfuse/langfuse/graphs/contributors | Public profile and blog, active contributor | Langfuse | INFERENCE: production trace failures; pain unverified | Direct observability adjacency | https://github.com/hassiebp | Langfuse issues/discussions | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Ben Bachem | Product Engineer | Langfuse / ClickHouse | https://github.com/langfuse/langfuse/graphs/contributors | Public profile states product engineering role | Langfuse | INFERENCE: agent evidence needs failure attribution | Product/evidence bridge | https://github.com/bezbac | Langfuse issues/discussions | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Greyson LaLonde | AI engineer | CrewAI | https://github.com/CrewAIInc/crewAI/graphs/contributors | Public AI engineering profile and active contributor record | CrewAI | INFERENCE: multi-agent workflows can repeat or stall | Hands-on orchestration builder | https://github.com/greysonlalonde | CrewAI Community/repo | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Lorenze Jay | Software engineer | CrewAI | https://github.com/CrewAIInc/crewAI/graphs/contributors | Public profile says building multi-AI agent systems | CrewAI | INFERENCE: multi-agent execution pain plausible | Direct multi-agent fit | https://github.com/lorenzejay | CrewAI Community/repo | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Lucas Gomide | Software developer | CrewAI | https://github.com/CrewAIInc/crewAI/graphs/contributors | Public contributor with project affiliation | CrewAI | INFERENCE: tool handoffs can create redundant calls | OSS builder reserve | https://github.com/lucasgomide | CrewAI Community/repo | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Tony Kipkemboi | Staff AIOps Engineer | Rekody / CrewAI | https://github.com/CrewAIInc/crewAI/graphs/contributors | Public profile and AIOps role/blog | CrewAI | INFERENCE: operational agents need progress/retry visibility | Strong reliability/operator angle | https://github.com/tonykipkemboi | CrewAI Community/repo | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Logan Markewich | Engineer | LlamaIndex | https://github.com/run-llama/llama_index/graphs/contributors | Public contributor and LlamaIndex affiliation | LlamaIndex | INFERENCE: document agents may repeat retrieval/tool work | Production workflow reserve | https://github.com/logan-markewich | LlamaIndex issues/discussions | UNKNOWN (none verified; no guessed email) | HIGH | MEDIUM | QUALIFIED |
+| Simon Suo | Research engineer | LlamaIndex | https://github.com/run-llama/llama_index/graphs/contributors | Public profile links LlamaIndex and research background | LlamaIndex | INFERENCE: stateful retrieval workflows need measurable progress | Technical research fit | https://github.com/Disiok | LlamaIndex issues/discussions | UNKNOWN (none verified; no guessed email) | HIGH | MEDIUM | QUALIFIED |
+| Andrei Fajardo | AI researcher/engineer | LlamaIndex / NerdAI | https://github.com/run-llama/llama_index/graphs/contributors | Public profile and blog describe AI engineering | LlamaIndex | INFERENCE: agent workflow efficiency pain plausible | Independent technical builder | https://github.com/nerdai | LlamaIndex issues/discussions | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Massimiliano Pippi | Engineer | LlamaIndex | https://github.com/run-llama/llama_index/graphs/contributors | Public profile and technical blog | LlamaIndex | INFERENCE: workflow failures need traceable evidence | Broad engineering perspective | https://github.com/masci | LlamaIndex issues/discussions | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| cthomas | UNKNOWN | Letta | https://github.com/letta-ai/letta/graphs/contributors | Active public contributor `carenthomas` | Letta | INFERENCE: state/memory loops plausible; identity details limited | Stateful-agent reserve | https://github.com/carenthomas | Letta repository issues | UNKNOWN (none verified; no guessed email) | HIGH | MEDIUM | DISCOVERED |
+| Sarah Wooders | Engineer | Letta | https://github.com/letta-ai/letta/graphs/contributors | Public profile, Letta affiliation, technical blog | Letta | INFERENCE: long-lived agents need progress/recovery evidence | Strong stateful-agent fit | https://github.com/sarahwooders | Letta repository issues | UNKNOWN (none verified; no guessed email) | HIGH | MEDIUM | QUALIFIED |
+| Matthew Zhou | Engineer | Letta | https://github.com/letta-ai/letta/graphs/contributors | Public profile and technical blog | Letta | INFERENCE: memory workflows may repeat work | Stateful runtime reserve | https://github.com/mattzh72 | Letta repository issues | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+| Kian Jones | Engineer | Letta | https://github.com/letta-ai/letta/graphs/contributors | Public profile links Letta and technical blog | Letta | INFERENCE: agent loops and recovery are plausible surfaces | Direct runtime relevance | https://github.com/kianjones9 | Letta repository issues | UNKNOWN (none verified; no guessed email) | MEDIUM | MEDIUM | QUALIFIED |
+
+## Coverage
+
+- GITHUB_TARGETS: 30
+- REDDIT_TARGETS: 0 (discovery source only; no identities verified)
+- HN_TARGETS: 0 (public leads retained in sources; no additional verified target counted)
+- PRODUCT_HUNT_TARGETS: 0 (public leads retained in sources; no additional verified target counted)
+- OUTREACH_SENT: 0
+
+## ICM note for reserve pool
+
+For every reserve row: OBSERVATION is the public contributor/project fact;
+EVIDENCE is the linked repository/profile; HYPOTHESIS is the explicitly marked
+fit inference; DECISION is `QUALIFY_FOR_OUTREACH` for `QUALIFIED` rows and
+`HOLD_FOR_ENRICHMENT` for `DISCOVERED` rows.
+
+## Reserve ICM records
+
+- NAME: William FH; OBSERVATION: Public `hinthornw` contributor to LangGraph; EVIDENCE: contributor graph and profile; HYPOTHESIS: graph execution may need progress controls; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Vadym Barda; OBSERVATION: Public `vbarda` contributor to LangGraph; EVIDENCE: contributor graph and profile; HYPOTHESIS: stateful execution may expose checkpoint failures; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Nuno Campos; OBSERVATION: Public `nfcampos` contributor with linked engineering context; EVIDENCE: contributor graph and profile; HYPOTHESIS: orchestration failure signals may be useful; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: David Duong; OBSERVATION: Public `dqbd` contributor with technical blog; EVIDENCE: contributor graph and profile; HYPOTHESIS: tool/state failures may need detection; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Steffen Schmitz; OBSERVATION: Public Langfuse engineer/contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: traces need actionable failure state; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Nimar; OBSERVATION: Public Langfuse contributor with research/company context; EVIDENCE: contributor graph and profile; HYPOTHESIS: eval traces may miss no-progress signals; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Hassieb Pakzad; OBSERVATION: Public Langfuse contributor with technical blog; EVIDENCE: contributor graph and profile; HYPOTHESIS: production traces may need failure attribution; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Ben Bachem; OBSERVATION: Public Langfuse product engineer; EVIDENCE: contributor graph and profile; HYPOTHESIS: agent evidence needs clearer progress state; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Greyson LaLonde; OBSERVATION: Public AI engineer and CrewAI contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: multi-agent workflows may repeat or stall; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Lorenze Jay; OBSERVATION: Public software engineer building multi-AI agent systems; EVIDENCE: contributor graph and profile; HYPOTHESIS: multi-agent execution may need cost-aware progress signals; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Lucas Gomide; OBSERVATION: Public CrewAI contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: tool handoffs may create redundant calls; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Tony Kipkemboi; OBSERVATION: Public AIOps engineer and CrewAI contributor; EVIDENCE: contributor graph, profile, and blog; HYPOTHESIS: operational agents need retry visibility; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Logan Markewich; OBSERVATION: Public LlamaIndex contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: document agents may repeat retrieval work; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Simon Suo; OBSERVATION: Public LlamaIndex contributor with research background; EVIDENCE: contributor graph and profile; HYPOTHESIS: retrieval workflows need measurable progress; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Andrei Fajardo; OBSERVATION: Public AI engineer and LlamaIndex contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: agent workflow efficiency pain may exist; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Massimiliano Pippi; OBSERVATION: Public engineer/blogger and LlamaIndex contributor; EVIDENCE: contributor graph and profile; HYPOTHESIS: workflow failures need traceable evidence; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: cthomas; OBSERVATION: Public `carenthomas` contributor to Letta with limited identity context; EVIDENCE: contributor graph and profile; HYPOTHESIS: state/memory loops are plausible; DECISION: HOLD_FOR_ENRICHMENT.
+- NAME: Sarah Wooders; OBSERVATION: Public Letta contributor with technical blog; EVIDENCE: contributor graph and profile; HYPOTHESIS: long-lived agents need recovery evidence; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Matthew Zhou; OBSERVATION: Public Letta contributor with technical blog; EVIDENCE: contributor graph and profile; HYPOTHESIS: memory workflows may repeat work; DECISION: QUALIFY_FOR_OUTREACH.
+- NAME: Kian Jones; OBSERVATION: Public Letta contributor with technical blog; EVIDENCE: contributor graph and profile; HYPOTHESIS: agent loops may need runtime detection; DECISION: QUALIFY_FOR_OUTREACH.
