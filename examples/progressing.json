@@ -1,0 +1,21 @@
+{
+  "expected_output": "PROGRESSING",
+  "events": [
+    {
+      "event_type": "tool",
+      "step_id": 1,
+      "tool_name": "write",
+      "state_before": {"version": 0},
+      "state_after": {"version": 1},
+      "artifacts_created": ["artifact-1"]
+    },
+    {
+      "event_type": "tool",
+      "step_id": 2,
+      "tool_name": "write",
+      "state_before": {"version": 1},
+      "state_after": {"version": 2},
+      "artifacts_created": ["artifact-2"]
+    }
+  ]
+}

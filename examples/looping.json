@@ -1,0 +1,41 @@
+{
+  "expected_output": "LOOPING",
+  "events": [
+    {
+      "event_type": "tool",
+      "step_id": 1,
+      "tool_name": "lookup",
+      "tool_args": {"id": 1},
+      "tool_result": {"ok": false},
+      "state_after": {"phase": "same"},
+      "artifacts_created": []
+    },
+    {
+      "event_type": "tool",
+      "step_id": 2,
+      "tool_name": "lookup",
+      "tool_args": {"id": 1},
+      "tool_result": {"ok": false},
+      "state_after": {"phase": "same"},
+      "artifacts_created": []
+    },
+    {
+      "event_type": "tool",
+      "step_id": 3,
+      "tool_name": "lookup",
+      "tool_args": {"id": 1},
+      "tool_result": {"ok": false},
+      "state_after": {"phase": "same"},
+      "artifacts_created": []
+    },
+    {
+      "event_type": "tool",
+      "step_id": 4,
+      "tool_name": "lookup",
+      "tool_args": {"id": 1},
+      "tool_result": {"ok": false},
+      "state_after": {"phase": "same"},
+      "artifacts_created": []
+    }
+  ]
+}

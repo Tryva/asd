@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stagnation-detector"
+version = "0.1.0"
+description = "Deterministic, evidence-contract based agent stagnation detection"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+authors = [{name = "Tryva"}]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+
+[project.optional-dependencies]
+agent-control = [
+  "agent-control-evaluators==8.7.0",
+  "agent-control-models==8.7.0",
+]
+
+[project.entry-points."agent_control.evaluators"]
+asd_stagnation = "stagnation_detector.integrations.agent_control:StagnationEvaluator"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["stagnation_detector*"]

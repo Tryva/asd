@@ -1,0 +1,9 @@
+{
+  "expected_output": "UNKNOWN",
+  "events": [
+    {"event_type": "model_output", "step_id": 1, "tool_result": {"value": 1}},
+    {"event_type": "model_output", "step_id": 2, "tool_result": {"value": 2}},
+    {"event_type": "model_output", "step_id": 3, "tool_result": {"value": 3}},
+    {"event_type": "model_output", "step_id": 4, "tool_result": {"value": 4}}
+  ]
+}
