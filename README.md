@@ -1,107 +1,127 @@
 # ASD — Agent Stagnation Detector
 
-ASD is a small, framework-neutral detector for repeated work, missing
-verifiable progress, deterministic loops, and budget risk in agent trajectories.
-It is a detector and evidence contract, not an agent runtime, quality judge, or
-recovery engine.
+Detect when an AI agent stops making verifiable progress.
 
-## Why repetition is not enough
+ASD is a framework-neutral deterministic detector for:
 
-An agent may legitimately read several files, retry a transient operation, or
-repeat a tool while the external state changes. ASD therefore requires
-observable evidence and distinguishes legitimate progress from repeated work
-without verifiable progress.
+- stagnation
+- loops
+- budget risk
+- insufficient evidence
 
-## Decisions
+An agent may legitimately repeat a tool while external state changes. ASD
+therefore looks for observable progress evidence instead of treating repetition
+alone as failure.
 
-The detector returns one of:
+## Why ASD
 
-- `PROGRESSING`
-- `STAGNATING`
-- `LOOPING`
-- `BUDGET_RISK`
-- `UNKNOWN`
+ASD separates detection from enforcement. It produces a deterministic status and
+structured evidence that a host system can review or use in an explicitly chosen
+control policy. It is not an agent runtime, quality judge, or recovery engine.
 
-`UNKNOWN` means that the available evidence is insufficient for a justified hard
-stagnation or loop decision. It is non-blocking by default and never maps to
-`DENY` in the included integration.
+## Quick start
 
-## TWO_ANCHOR evidence contract
+```bash
+git clone https://github.com/Tryva/asd.git
+cd asd
+python -m venv .venv
+```
 
-Hard stagnation/loop decisions require both a primary negative signal and an
-independent trusted state or progress anchor. Suitable anchors include a state
-version, checkpoint, artifact/resource identifier, completed-item counter, or
-trusted tool-result fingerprint. Trace IDs, span IDs, message IDs, timestamps,
-and retry counters are not progress proof by themselves.
-
-Raw prompts and raw tool results are not required. Structured fields and stable
-fingerprints are sufficient. Missing, conflicting, and ambiguous evidence is
-preserved as `UNKNOWN` rather than silently treated as progress or failure.
-
-## Install
+On macOS/Linux, activate with `source .venv/bin/activate`. On Windows
+PowerShell, activate with `.venv\\Scripts\\Activate.ps1`. Then run:
 
 ```bash
 python -m pip install .
+python examples/agent_control_demo.py
+python -m unittest discover -s tests -v
 ```
 
-Optional Agent Control evaluator plugin:
+The demo and tests are local and do not call an LLM, provider, or paid API.
+
+## Example output
+
+A synthetic trajectory that repeats the same lookup without a state change can
+produce `LOOPING`:
+
+```text
+{
+  "status": "LOOPING",
+  "signals": ["EXACT_REPEAT", "NO_STATE_DELTA", "NO_NEW_ARTIFACT"],
+  "evidence": [
+    "same normalized observation repeated 3 times",
+    "trusted state anchor unchanged across 4 steps",
+    "no verified artifact created"
+  ]
+}
+```
+
+This is synthetic evidence only; the repository contains no customer traces.
+
+## Decisions
+
+The detector returns one of `PROGRESSING`, `STAGNATING`, `LOOPING`,
+`BUDGET_RISK`, or `UNKNOWN`. `UNKNOWN` means that the evidence is insufficient
+for a justified hard decision. It is non-blocking by default and maps to `LOG`
+in the included integration.
+
+## TWO_ANCHOR
+
+Hard stagnation/loop decisions require a primary negative signal and an
+independent trusted state or progress anchor. Examples include a state version,
+checkpoint, artifact/resource identifier, completed-item counter, or trusted
+tool-result fingerprint. Trace IDs, timestamps, and retry counters are not
+progress proof by themselves.
+
+| Simple duplicate detector | ASD |
+| --- | --- |
+| Exact repetition | Exact repetition plus evidence checks |
+| No trusted progress evidence | Trusted progress anchors are explicit |
+| Legitimate repetition is indistinguishable | Legitimate repetition can remain progressing |
+| No cycle model | Repeated cycles can be detected |
+| Ambiguous evidence is usually a binary result | Ambiguous evidence is preserved as `UNKNOWN` |
+| Little or no explanation | Structured evidence and missing-evidence fields |
+
+## Agent Control integration
+
+Install the optional evaluator plugin with:
 
 ```bash
 python -m pip install ".[agent-control]"
 ```
 
-The plugin uses the `agent_control.evaluators` entry point and
-`evaluate_with_context(data, step)`. Agent Control remains the enforcement
-layer; ASD returns structured evidence. The default mapping is:
+The evaluator is discoverable through `agent_control.evaluators` as
+`asd_stagnation` and exposes `evaluate_with_context(data, step)`. Agent Control
+remains the enforcement layer; its evaluator metadata name is
+`asd.stagnation`. A host may opt into a strict `LOOPING` → `DENY` policy, but
+`UNKNOWN` must not be configured as `DENY`.
 
-| ASD status | Recommended action |
-| --- | --- |
-| `PROGRESSING` | `ALLOW` |
-| `STAGNATING` | `WARN` |
-| `LOOPING` | `WARN` |
-| `BUDGET_RISK` | `WARN` |
-| `UNKNOWN` | `LOG` |
+## Safety / UNKNOWN
 
-A host may opt into a strict `LOOPING` → `DENY` policy. `UNKNOWN` must not be
-configured as `DENY`. Configure the evaluator name as `asd.stagnation`.
+Missing, conflicting, and ambiguous evidence is preserved as `UNKNOWN` rather
+than silently treated as progress or failure. ASD never turns `UNKNOWN` into
+`DENY`; hosts remain responsible for policy and safety decisions.
 
-## Minimal Python example
+## Examples
 
-```python
-from stagnation_detector import detect_stagnation
-
-events = [
-    {
-        "event_type": "tool",
-        "step_id": 1,
-        "tool_name": "write",
-        "state_before": {"version": 0},
-        "state_after": {"version": 1},
-        "artifacts_created": ["artifact-1"],
-    },
-]
-
-decision = detect_stagnation(events)
-print(decision.status)
-```
-
-Run the synthetic Agent Control adapter example with:
+The JSON files in `examples/` show synthetic progressing, looping, and
+insufficient-evidence trajectories. Run the adapter demo with:
 
 ```bash
 python examples/agent_control_demo.py
 ```
-
-The JSON examples in `examples/` are synthetic and show progressing, looping,
-and insufficient-evidence trajectories. They do not contain customer traces.
 
 ## Limitations
 
 ASD does not understand business goals, prove answer quality, verify arbitrary
 external side effects, choose a recovery action, or establish production
 reliability. Thresholds are initial deterministic defaults. State is bounded
-and process-local; a multi-worker deployment needs an explicitly shared state
-design. The project contains no LLM calls or paid APIs.
+and process-local; multi-worker use needs an explicitly shared state design.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for local development, tests, and how to
+report false positives or false negatives.
 
 ## License
 
-Apache-2.0. See `LICENSE`.
+Apache-2.0. See [LICENSE](LICENSE).

@@ -10,6 +10,7 @@ readme = "README.md"
 license = {file = "LICENSE"}
 requires-python = ">=3.10"
 authors = [{name = "Tryva"}]
+keywords = ["agents", "stagnation", "loop detection", "evidence", "safety"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Intended Audience :: Developers",
@@ -21,6 +22,11 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Tryva/asd"
+Repository = "https://github.com/Tryva/asd"
+Issues = "https://github.com/Tryva/asd/issues"
 
 [project.optional-dependencies]
 agent-control = [
